@@ -1,0 +1,22 @@
+.culture {
+	background-color: black;
+
+	.culture-image {
+		-moz-filter: grayscale(100%);
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+
+	.culture-image img {
+		opacity: 0;
+	}
+}
+
+.single-culture-image {
+	margin-top: 40px;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+}

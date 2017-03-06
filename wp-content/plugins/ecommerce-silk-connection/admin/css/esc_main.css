@@ -1,0 +1,7 @@
+.escShopSettings-column { width: 49.5%;  }
+.escShopSettings-column .postbox { padding: 20px; box-sizing: border-box; }
+.escShopSettings-column input { width: 100%; }
+.escShopSettings-column input[type=checkbox] { width: auto; }
+.escShopSettings-column .button { width: auto; }
+.escShopSettings-column h3 { font-size: 21px; font-weight: normal; padding: 8px 0; }
+.escShopSettings-column:first-child { margin-right: 1%; }

@@ -1,0 +1,37 @@
+.error404{
+	.not-found, .wrapper{
+		height: 100%;
+		.container{
+			@include valign();
+			position: absolute;
+			left: 0;
+			right: 0;
+			color: $main-c2;
+			text-align: center;
+			a{
+				color: $main-c2;
+				text-decoration: underline;
+			}
+			h2{
+				text-transform: uppercase;
+			}
+		}
+	}
+	.not-found{
+		@include cover();
+	}
+	.c-home{
+		position: absolute;
+		z-index: 11;
+		width: 100%;
+	}
+}
+
+@mixin error404_tab {
+	.error404{
+		.not-found{
+			background-color: $main-c1;
+			background-image: none !important;
+		}
+	}
+}

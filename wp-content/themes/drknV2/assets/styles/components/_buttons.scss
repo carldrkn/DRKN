@@ -1,0 +1,77 @@
+.btn {
+  background-color: $btnbg-color;
+  color: $btn-color;
+  border: none;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  @include font-size-default;
+  @include bold;
+  @include border-radius(5px);
+  @include transition(all, 0.5s);
+  &.arr {
+    width: initial;
+    display: inline-block;
+    padding: 15px 48px 15px 24px;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      margin-top: -8px;
+      background-image: url('../images/icons/arrow_white.png');
+    }
+  }
+  &:active, &:focus,
+  &:hover {
+    color: $btn-colorh;
+    background-color: $btnbg-colorh;
+    text-decoration: none;
+  }
+}
+
+button {
+	border: 1px solid $btnbg-color;
+	color: $btnbg-color;
+	display: inline-block;
+	width: auto;
+	padding: 10px 20px;
+	@include border-radius( 0 );
+	background-color: transparent;
+	@include bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	@include transition(all, 0.5s);
+	line-height: normal;
+	&:active, &:focus,
+	&:hover {
+		color: $btn-color;
+		background-color: $btnbg-color;
+		text-decoration: none;
+	}
+	&.inverted-btn {
+		border: 1px solid $btnbg-color;
+		color: $btn-color;
+		background-color: $btnbg-color;
+		&:active, &:focus,
+		&:hover {
+			color: $btnbg-color;
+			background-color: $btn-color;
+			text-decoration: none;
+		}
+	}
+}
+
+@mixin buttons_mob {
+  .btn {
+    white-space: normal;
+    margin-bottom: 5px;
+  }
+}
+

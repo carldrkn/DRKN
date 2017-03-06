@@ -1,0 +1,168 @@
+.checkout {
+	h1 {
+		text-transform: uppercase;
+	}
+	.checkbox-s {
+		margin-bottom: 12px;
+		.input-field {
+			position: relative;
+			padding-left: 34px;
+			label {
+				cursor: pointer;
+				margin-bottom: 0;
+			}
+			span {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -11px;
+				display: block; 
+				width: 22px;
+				height: 22px;
+				border: 1px solid $main-c1;
+			}
+			input[type='checkbox'] {
+				display: none;
+			}
+			input[type='checkbox']:checked + span {
+				background-color: $main-c1;
+			}
+		}
+	}
+	select {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0px;
+		background-image: url("../images/arrow_down.png");
+		background-position: 98% 50%;
+		background-repeat: no-repeat;
+		&:focus {
+			background-image: url("../images/arrow_up.png");	
+		}
+	}
+	.input-field {
+		&.error {
+			label {
+				color: red;
+			}
+			input[type='date'],
+			input[type='email'],
+			input[type='password'],
+			input[type='search'],
+			input[type='tel'],
+			input[type='text'] {
+				border-color: red;
+			}
+		}
+	}
+	#js-voucher-fields {
+		margin-top: 10px;
+		margin-bottom: 40px;
+		.input-group {
+			max-width: 452px;
+		}
+		.input-field {
+			padding-left: 0;
+			label {
+				display: none;
+			}
+			input[type='text'] {
+				@include box-sizing( border-box );
+				@include border-radius( 0 );
+			}
+			&.error {
+				label { border-color: red; }
+				input[type='text'] {
+					border-color: red;
+				}
+			}
+		}
+		.input-group-btn {
+			padding-left: 10px;
+		}
+		button {
+			border: 1px solid $btnbg-color;
+			background-color: transparent;
+			@include border-radius( 0 );
+			color: $btnbg-color;
+			padding: 4px 10px;
+			height: 40px;
+			@include box-sizing( border-box );
+			margin-bottom: 0;
+			@include transition(all, 0.5s);
+			line-height: normal;
+			&:active, &:focus,
+			&:hover {
+				color: $btn-color;
+				background-color: $btnbg-color;
+				text-decoration: none;
+			}
+		}
+		.voucher-fields-current {
+			margin-bottom: 20px;
+			.input-group {
+				margin-bottom: 10px;
+			}
+			.voucher-fields-code {
+				margin-bottom: 0;
+				vertical-align: middle;
+				margin-top: 8px;
+				display: inline-block;
+			}
+			.input-group-btn {
+				button {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.wrap-confirmation {
+		h4, h3 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		p {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.header-t {
+			border-bottom: 1px solid $main-c1;
+		}
+		.totals-row {
+			@include bold;
+		}
+		tfoot.second {
+			border-top: 1px solid $main-c1;
+		}
+	}
+	#esc_purchase {
+		p {
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@mixin checkout_tab {
+	.checkout {
+		#js-voucher-fields {
+			.input-group {
+				max-width: 422px;
+			}
+		}
+		.btn-wrapper {
+			text-align: center;
+		}
+	}	
+}
+
+@mixin checkout_mob {
+	.checkout {
+		.btn-wrapper {
+			text-align: center;
+			button {
+				width: 100%;
+			}
+		}
+	}
+}

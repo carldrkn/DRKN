@@ -1,0 +1,33 @@
+.default-page {
+	.content {
+		padding-bottom: 40px;
+		h1 {
+			font-size: 8rem;
+			line-height: normal;
+			text-align: center;
+		  	margin-bottom: 70px;
+		}
+	}
+}
+@mixin pd_dt {
+	.default-page {
+		.content {
+			h1 {
+				font-size: 6rem;
+			  	margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+@mixin pd_tab {
+	.default-page {
+		.content {
+		padding-bottom: 30px;
+			h1 {
+				font-size: 4.2rem;
+			  	margin-bottom: 35px;
+			}
+		}
+	}
+}

@@ -1,0 +1,166 @@
+// Search form
+
+.search-form {
+  input[type='submit'] {
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+  }
+}
+
+label {
+  color: $f-title;
+  @include bold;
+}
+
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='date'],
+input[type='search'],
+input[type='tel'] {
+	width: 100%;
+	background-color: white;
+	color: $f-value;
+	line-height: normal;
+	border: 1px solid $f-border;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	height: 40px;
+	@include box-sizing(border-box);
+	@include appearance( none );
+	@include border-radius(0);  // remove border-radius in iOS
+	&:focus{
+		outline: none;
+		background-color: $lighter-color;
+	}
+}
+
+textarea {
+  @include border-radius(5px);
+  width: 100%;
+  border: 1px solid $f-border;
+  background-color: white;
+  color: $f-value;
+  padding: 16px;
+  min-height: 178px;
+  &:focus{
+	outline: none;
+  }
+}
+
+input[type='submit'] {
+  @include border-radius(5px);
+  background-color: $f-submit;
+  color: $f-scolor;
+  width: 100%;
+  padding: 22px;
+  border: none;
+  @include transition(all, 0.5s);
+  &:active, &:focus,
+  &:hover {
+    color: $f-scolorh;
+    background-color: $f-submith;
+  }
+}
+
+select {
+	width: 100%;
+	background-color: white;
+	color: $f-value;
+	line-height: normal;
+	border: 1px solid $f-border;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	height: 40px;
+	@include box-sizing(border-box);
+	margin-bottom: 20px;
+	&:focus {
+		background-color: $lighter-color;
+	}
+}
+
+// select {
+  // height: 60px;
+  // width: 100%;
+  // border: 1px solid $f-border;
+  // background-color: white;
+  // color: $f-value;
+  // padding: 16px;
+  // margin: 0;
+  // @include border-radius(5px);
+  // @include box-sizing(border-box);
+  // @include appearance(none);
+  // background-image: linear-gradient(45deg, transparent 50%, $gray-c1 50%),
+  // linear-gradient(135deg, $gray-c1 50%, transparent 50%);
+  // background-position: calc(100% - 25px) calc(1em + 9px),
+  // calc(100% - 17px) calc(1em + 9px);
+  // background-size: 8px 8px,
+  // 8px 8px,
+  // 1px 1.5em;
+  // background-repeat: no-repeat;
+  // &:focus {
+    // background-image: linear-gradient(45deg, $main-c2 50%, transparent 50%),
+    // linear-gradient(135deg, transparent 50%, $main-c2 50%);
+    // background-position: calc(100% - 17px) 1.5em,
+    // calc(100% - 25px) 1.5em;
+    // background-size: 8px 8px,
+    // 8px 8px,
+    // 1px 1.5em;
+    // background-repeat: no-repeat;
+    // outline: 0;
+  // }
+// }
+
+.form-wrap {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    li {
+      margin: 0 0 25px;
+      padding: 0;
+      font-size: 1.6rem;
+      &.left,
+      &.right {
+        display: inline-block;
+        width: 50%;
+      }
+      &.left {
+        padding-right: 27px;
+      }
+      &.right {
+        padding-left: 27px;
+      }
+      &.colon {
+        position: relative;
+        &:after {
+          content: ":";
+          position: absolute;
+          right: -4px;
+          bottom: 18px;
+          font-weight: bold;
+          font-size: 2.0rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin forms_mob {
+  .form-wrap {
+    ul {
+      li {
+        &.left {
+          padding-right: 10px;
+        }
+        &.right {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

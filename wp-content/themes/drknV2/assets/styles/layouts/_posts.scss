@@ -1,0 +1,151 @@
+.post-single{
+	margin-top: 62px;
+	article{
+		margin-bottom: 100px;
+		h2{
+			font-size: 8.0rem;
+			text-align: center;
+			line-height: 1;
+			margin-bottom: 47px;
+			span{
+				@include HelveticaNeueLTStd-Lt;
+			}
+		}
+		img{
+			max-width: 100%;
+			margin: 20px 0;
+			height: auto;
+			&.alignleft{
+				float: left;
+				margin-right: 25px;
+			}
+			&.alignright{
+				float: right;
+				margin-left: 25px;
+			}
+		}
+		iframe{
+			margin: 20px 0;
+			max-width: 100%;
+		}
+		.post-category{
+			margin-top: 97px;
+			margin-bottom: 96px;
+			display: table;
+			.pc-cont, .pc-img {
+				display: table-cell;
+				vertical-align: middle;
+				width: 50%;
+			}
+			.pc-cont {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		p{
+			&:empty{
+				display: none;
+			}
+		}
+	}
+	.sidebar-menu{
+		margin-top: 25px;
+		.list-nav,
+		.cat-nav{
+			margin-top: 0;
+		}
+	}
+	.wrapper{
+		margin-bottom: 32px;
+	}
+}
+@mixin post-single_lg {
+	.post-single{
+		article{
+			h2 {
+			    font-size: 4rem;
+			    margin-bottom: 30px;
+			}
+		}
+	}
+}
+@mixin post-single_dt {
+	.post-single{
+		article{
+		    margin-bottom: 60px;
+			.post-category{
+				margin-top: 50px;
+				margin-bottom: 50px;
+			}
+			img{
+
+			}
+			h2 {
+			    font-size: 3rem;
+			    margin-bottom: 30px;
+			}
+		}
+	}
+}
+@mixin post-single_tab {
+	.post-single{
+		margin-top: 10px;
+		 .sidebar-menu{
+			margin-bottom: 45px;
+		 }
+		 article{
+			.post-category {
+				.pc-cont {
+					padding-left: 0;
+				}
+			}
+			img{
+				margin: 20px auto;
+				display: block;
+				&.alignleft{
+					float: none;
+					margin-right: auto;
+					margin-left: auto;
+				}
+				&.alignright{
+					float: none;
+					margin-left: auto;
+				    margin-right: auto;
+				}
+			}
+			iframe{
+				margin: 20px auto;
+				display: block;
+			}
+		 }
+	}
+}
+@mixin post-single_mob{
+	.post-single{
+		article{
+			margin-bottom: 0;
+			.post-category {
+				display: block;
+				margin-top: 30px;
+				margin-bottom: 50px;
+				.pc-content, .pc-img {
+					display: block;
+					width: 100%;
+					vertical-align: text-top;
+				}
+				.pc-cont {
+					padding-right: 0;
+				}
+			}
+			img {
+			    margin: 0 0 25px;
+			}
+			h2{
+				font-size: 4rem;
+			}
+		}
+		.wrapper {
+		    margin-bottom: 0;
+		}
+	}
+}

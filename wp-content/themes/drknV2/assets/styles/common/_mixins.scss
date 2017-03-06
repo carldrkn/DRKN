@@ -1,0 +1,124 @@
+/* -----------------------------------------------------------------------------
+
+    MIXINS
+
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+    Mixin Helper
+----------------------------------------------------------------------------- */
+
+/* transition */
+@mixin transition( $attr, $secs ) {
+  -webkit-transition: $attr $secs ease;
+  -moz-transition: $attr $secs ease;
+  -o-transition: $attr $secs ease;
+  transition: $attr $secs ease;
+}
+
+/* transition */
+@mixin transitions( $param ) {
+  -webkit-transition: $param;
+  -moz-transition: $param;
+  -o-transition: $param;
+  transition: $param;
+}
+
+@mixin transform( $rotate ) {
+  -ms-transform: $rotate; /* IE 9 */
+  -webkit-transform: $rotate; /* Chrome, Safari, Opera */
+  transform: $rotate;
+}
+
+/* border radius */
+@mixin border-radius( $radius ) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* vertical align */
+@mixin valign() {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* placeholder */
+@mixin placeholder( $color ) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+/* text none */
+@mixin textnone {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+}
+
+/* fullscreen background */
+@mixin fsBG( $bg ) {
+  background: url($bg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* fullscreen cover */
+@mixin cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* box shadow */
+@mixin box-shadow( $bs ) {
+  -webkit-box-shadow: $bs;
+  -moz-box-shadow: $bs;
+  box-shadow: $bs;
+}
+
+/* appearance */
+@mixin appearance( $ap ) {
+	-webkit-appearance: $ap;
+	-moz-appearance: $ap;
+	appearance: $ap;
+}
+
+/* box sizing */
+@mixin box-sizing( $bb ) {
+	-webkit-box-sizing: $bb;
+	-moz-box-sizing: $bb;
+	box-sizing: $bb;
+}
+
+/* clearfix*/
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+      clear: both;
+  }
+  *zoom: 1;
+}

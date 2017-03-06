@@ -1,0 +1,128 @@
+/** FRONT PAGE **/
+
+.frontpage-slider {
+	position: relative;
+	height: 0;
+	padding-bottom: 45%;
+}
+
+.frontpage-splash.first {
+	padding-right: 30px / 3 * 2;
+}
+
+.frontpage-splash.second {
+	padding-left: 30px / 3 * 1;
+	padding-right: 30px / 3 * 1;
+}
+
+.frontpage-splash.third {
+	padding-left: 30px / 3 * 2;
+}
+
+@media screen and (max-width: 768px) {
+	.frontpage-splashes, .frontpage-splash, .frontpage-instgram-post {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+}
+
+section.slider-section .container-fluid{
+	padding: 0;
+}
+
+section.promo-section{
+	margin: 30px 0;
+}
+
+
+section.promo-section .container-fluid .row .col-md-4{
+
+
+}
+
+section.promo-section .container-fluid .row .activist-title{
+	color: black;
+	position: absolute;
+	text-align: center;
+	font-size: 38px;
+	line-height: 38px;
+	margin: 0;
+	top: 15px;
+	left: 50%;
+	text-transform: uppercase;
+}
+
+section.promo-section .container-fluid .row .activist-title span{
+	letter-spacing: 4px;
+}
+
+section.promo-section .container-fluid .row .col-md-4 img{
+	width: 100%;
+}
+
+section.activist-small .single-image img{
+	width: 100%;
+}
+
+section.activist-small .single-image{
+	padding: 0;
+}
+
+
+.wrap-h3{
+	width: 100%;
+	background: url('assets/images/h3-bg.png');
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+.wrap-h3 h3{
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 0 20px;
+	text-align: center;
+}
+
+
+section.product-list .container-fluid .row{
+	padding: 30px 0;
+}
+
+section.product-list.shop-page .container-fluid .row .product:nth-child(4n+1){
+	clear: none;
+}
+
+section.product-list .container-fluid .row .product:nth-child(4n+1){
+//	clear: left;
+}
+
+section.product-list .container-fluid .row .product{
+	margin-bottom: 50px;
+}
+
+section.product-list .container-fluid .row .product .product-name,
+section.product-list .container-fluid .row .product .product-price{
+	font-size: 17px;
+	font-family: 'AkzidenzGroteskBQ-LigCnd';
+	line-height: 19px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+section.product-list .container-fluid .row .product .product-price{
+	color: #757575;
+}
+
+section.product-list .container-fluid .row .product img{
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+section.product-list .container-fluid .row .product .product-name{
+	color: black;
+}
+
+/** END FRONT PAGE **/

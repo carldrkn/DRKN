@@ -1,0 +1,17 @@
+.admin-bar {
+  .navbar-fixed-top {
+    top: 32px;
+  }
+}
+
+#wpadminbar {
+  position: fixed;
+}
+
+@media only screen and (max-width: 782px ) {
+	.admin-bar {
+	  .navbar-fixed-top {
+		top: 45px;
+	  }
+	}
+}

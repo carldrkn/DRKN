@@ -1,0 +1,8 @@
+.culture {
+	background-color: black;
+
+	.culture-image {
+		@include transition(opacity 0.4s);
+		opacity: 0;
+	}
+}

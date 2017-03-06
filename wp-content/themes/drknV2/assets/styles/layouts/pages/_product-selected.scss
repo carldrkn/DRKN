@@ -1,0 +1,336 @@
+#sel-prod {
+	padding-bottom: 200px;
+}
+
+.product-selected {
+	.item-pop {
+		margin-top: 17px;
+		text-align: center;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.prod-item {
+			padding: 0;
+			.img-responsive {
+				margin-bottom: 8px;
+				width: 100%;
+			}
+		}
+	}
+	.psc-selected {
+		.content {
+			padding-top: 67px;
+			h1 {
+				@include bold;
+				@include font-size-default;
+				margin-bottom: 0;
+			}
+			.price { margin-bottom: 12px; }
+			h2 {
+				@include font-size-default;
+				margin-bottom: 0;
+			}
+			.arr {
+				@include bold;
+				text-decoration: none;
+				&:before {
+					content: "›› ";
+				}
+			}
+			.c-content {
+				p {
+					margin-bottom: 19px;
+				}
+				ul {
+					padding-left: 19px;
+					margin-bottom: 19px;
+				}
+			}
+		  	th {
+			  font-size: 0.8em;
+			  padding: 4px;
+			}
+			ul.color-list {
+				margin: 0 0 0 6px;
+				padding: 0;
+				list-style: none;
+				li {
+					display: inline-block;
+					a {
+						display: block;
+						text-decoration: none;
+						padding: 2px 15px;
+						&.active {
+							@include bold;
+						}
+					}
+				}
+			}
+			.size-link {
+				margin: 20px 0 0;
+				padding: 0;
+				list-style: none;
+				font-size: 0;
+				line-height: normal;
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+				li {
+					display: table-cell;
+					&:last-child {
+						border-right: 1px solid $btnbg-color;
+					}
+					label {
+						display: block;
+						width: 100%;
+						@include font-default;
+						text-decoration: none;
+						text-align: center;
+						border-left: 1px solid $btnbg-color;
+						border-top: 1px solid $btnbg-color;
+						border-bottom: 1px solid $btnbg-color;
+						@include transition( all,0.5s );
+						margin-bottom: 0;
+						padding: 5px 0;
+						cursor: pointer;	
+						&:active, &:focus,
+						&:hover {
+							background-color: $btnbg-color;
+							color: $btn-color;
+						}
+					}
+					input[type='radio'] {
+						display: none;
+					}
+					&.disabled {
+						label {
+							text-decoration: line-through;
+							color: $light-color;
+							pointer-events: none;
+							cursor: default;
+						}
+					}
+					
+					input[type=radio]:checked + label{
+						background-color: $btnbg-color;
+						color: $btn-color;
+					}
+				}
+			
+			}
+			p {
+				margin-bottom: 18px;
+			}
+			.add-patch {
+				border-top: 1px solid $light-border;
+				border-bottom: 1px solid $light-border;
+				padding-top: 30px;
+				padding-bottom: 30px;
+				h2 {
+					margin-top: 0;
+				}
+				.link-wrap {
+					margin-left: 17px;
+					.link-update {
+						float: left;
+					}
+					.price {
+						float: left;
+						margin-left: 100px;
+					}
+					.link-update {
+						.minus, .add, .count {
+							display: inline-block;
+							vertical-align: middle;
+						}
+						.minus, .add {
+							text-decoration: none;
+							padding: 0 7px;
+						}
+						.count {
+							color: $light-color;
+						}
+					}
+				}
+				.img-responsive {
+					margin: 16px auto 10px;
+				}
+			}
+			.total-p {
+				padding-top: 19px;
+				padding-bottom: 20px;
+				.price {
+					color: $light-color;
+				}
+			}
+			.btn-border {
+				width: 100%;
+			}
+			.btn-no-border {
+			  width: 100%;
+			  border-top: none;
+			}
+
+		}
+		.unlockProduct {
+			h3 {
+				text-transform: uppercase;
+			}
+			h5 {
+				margin-bottom: 10px;
+				margin-top: 30px;
+				text-transform: uppercase;
+				label {
+					margin-bottom: 0;
+				}
+			}
+			input[type='text'] {
+				margin-bottom: 20px;
+				padding: 5px 20px;
+				height: 40px;
+			}
+			p {
+				> button {
+					margin-left: 10px;
+				}
+			}
+			.unlockProduct-submitArea {
+				margin-bottom: 20px;
+				.input-group {
+					max-width: 332px;
+				}
+				input[type='text'], button {
+					display: inline-block;
+				}
+				input[type='text'] {
+					margin-bottom: 0;
+				}
+				.input-group-btn {
+					padding-left: 10px;
+				}
+				button {
+					padding: 3px 20px;
+					height: 40px;
+					@include box-sizing( border-box );
+					background-color: transparent;
+					@include border-radius( 0 );
+					border: 1px solid $btnbg-color;
+					color: $btnbg-color;
+					@include transition(all, 0.5s);
+					line-height: normal;
+					&:active, &:focus,
+					&:hover {
+						color: $btn-color;
+						background-color: $btnbg-color;
+						text-decoration: none;
+					}
+				}
+			}
+			.voucherErrors {
+				display: block;
+			}
+		}
+	}
+}
+
+@mixin product-selected_lg {
+	.product-selected {
+		.psc-selected {
+			.unlockProduct {
+				p {
+					> button {
+						margin-top: 10px;
+						margin-left: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin product-selected_dt {
+	.product-selected {
+		.psc-selected {
+			.content {
+				text-align: center;
+				padding-top: 0px;
+				.c-content {
+					ul {
+						list-style: none;
+						padding-left: 0;
+					}
+				}
+				.add-patch {
+					.link-wrap {
+						margin-left: auto;
+						margin-right: auto;
+						max-width: 220px;
+						.price {
+							float: right;
+							margin-left: 0;
+						}
+					}
+				}
+				.btn-border {
+					width: 100%;
+				}
+			}
+			.unlockProduct {
+				input[type='text'] {
+					text-align: left;
+				}
+				p {
+					> button {
+						margin-top: 0;
+						margin-left: 10px;
+					}
+				}
+				.unlockProduct-submitArea {
+					.input-group {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+@mixin product-selected_tab {
+	#sel-prod {
+		padding-bottom: 120px;
+	}
+	.product-selected {
+		.psc-selected {
+			.content {
+				
+				.size-link {
+					li {
+						label {
+							padding: 8px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin product-selected_mob {
+	#sel-prod {
+		padding-bottom: 80px;
+	}
+	.product-selected {
+		.psc-selected {
+			.content {
+				.add-patch {
+					.link-wrap {
+						max-width: 160px;
+					}
+				}
+			}
+		}
+	}
+}

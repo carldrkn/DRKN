@@ -1,0 +1,280 @@
+.banner-slider{
+	position: relative;
+	height: 100%;
+	.c-home{
+		position: absolute;
+		z-index: 11;
+		width: 100%;
+	}
+	.video-outer, .video-inner{
+		@include cover;
+		height: 100%;
+		overflow: hidden;
+		width: 100%;
+		video{
+			background-color: $main-c1;
+			height: 105%;
+			width: 100%;
+		}
+		.video-play{
+			@include valign();
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			right: 0;
+			width: 120px;
+			margin: auto;
+			cursor: pointer;
+			img{
+				display: block;
+				margin: auto;
+			}
+		}
+	}
+	.carousel{
+	    height: 100%;
+		.carousel-inner{
+			height: 100%;
+			background-color: $main-c1;
+			.item{
+				height: 100%;
+				background-color: $main-c1;
+				@include cover;
+				&.background-video{
+					.placeholder-image{
+						@include valign();
+						position: absolute;
+						left: 0;
+						right: 0;
+						margin: 0 auto;
+					}
+				}
+				.bannerContent{
+					@include valign();
+					position: absolute;
+					left: 0;
+					right: 0;
+					text-align: center;
+					.bannerTitle{
+						@include bold;
+						margin: 0;
+						color: $main-c2;
+						font-size: 15.4rem;
+						line-height: 1.2;
+						span{
+							@include superlight;
+							&.divider {
+								display: block;
+							}
+						}
+						&:after{
+							content: "";
+							display: inline-block;
+							border-bottom: 3px solid $main-c2;
+							width: 75px;
+							margin-left: -6px;
+							margin-bottom: -10px;
+						}
+					}
+				}
+				a, a:active, a:hover{
+					text-decoration: none;
+				}
+			}
+		}
+
+		.carousel-indicators{
+		    bottom: 55px;
+			li{
+				@include border-radius( 0 );
+				width: 19px;
+				height: 40px;;
+				margin: 0 3px;
+				position: relative;
+				border: medium none;
+				&.active{
+					background-color: transparent;
+					&:before{
+						@include valign();
+						content: ' ';
+						position: absolute;
+						width: 18px;
+						height: 2px;
+						left: 0;
+						background-color: $main-c2;
+					}
+				}
+				&:before{
+					@include transition( all, 0.3s );
+					@include valign();
+					content: ' ';
+					position: absolute;
+					width: 18px;
+					height: 2px;
+					left: 0;
+					background-color: $main-c2a;
+				}
+				&:hover:before{
+					height: 20px;
+				}
+			}
+		}
+	}
+	.mobileImageFB{
+		display: none;
+	}
+}
+
+.frontpage{
+	#vimelar-container{
+		position: static !important;
+		height: auto !important;
+	}
+
+  .prod-item {
+	  .title {
+		margin-top: -20%;
+	  }
+  }
+}
+
+@mixin bannerSlider_lg{
+	.banner-slider{
+		.carousel{
+			.carousel-inner{
+				.item{
+					.bannerContent{
+						.bannerTitle {
+						    font-size: 12rem;
+						  	&:after {
+								width: 58px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin bannerSlider_dt{
+	.banner-slider{
+		.carousel{
+			display: none;
+			.carousel-inner{
+				.item{
+					.bannerContent{
+						.bannerTitle {
+						    font-size: 10rem;
+							&:after{
+								content: "";
+								display: inline-block;
+								border-bottom: 2px solid $main-c2;
+								width: 38px;
+							}
+						}
+					}
+				}
+			}
+			.carousel-indicators{
+				display: none;
+			}
+		}
+		.video-outer{
+			background-color: transparent;
+			.video-play{
+				img{
+					width: 80px;
+				}
+			}
+			.video-inner{
+				video{
+					display: none;
+				}
+			}
+		}
+		.mobileImageFB{
+			display: block;
+			height: 100%;
+			.item{
+				@include fsBG( '' );
+				height: 100%;
+				.container{
+					@include valign();
+					position: absolute;
+					left: 0;
+					right: 0;
+					
+					.row {
+						a {
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
+					
+					.imgfbtitle{
+						text-align: center;
+						@include bold;
+						margin: 0;
+						color: $main-c2;
+						font-size: 10rem;
+						line-height: 1.2;
+						span{
+							@include superlight;
+							&.divider{
+								display: block;
+							}
+						}
+						&:after{
+							content: "";
+							display: inline-block;
+							border-bottom: 2px solid $main-c2;
+						  	margin-bottom: -5px;
+							width: 28px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin bannerSlider_mob{
+	.banner-slider{
+		.carousel{
+			.carousel-inner{
+				.item{
+					.bannerContent{
+						.bannerTitle {
+						    font-size: 6rem;
+							max-width: 270px;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+		}
+		.video-outer{
+			.video-play{
+				img{
+					width: 50px;
+				}
+			}
+		}
+		.mobileImageFB{
+			.item{
+				.container{
+					.imgfbtitle{
+						font-size: 6rem;
+						max-width: 270px;
+						margin: 0 auto;
+						&:after{
+							width: 22px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

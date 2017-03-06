@@ -1,0 +1,256 @@
+.footer{
+	background-color: $footerbg;
+	display: table;
+	color: $main-c2;
+	width: 100%;
+	text-align: center;
+	padding-top: 43px;
+    padding-bottom: 68px;
+	.footerText {
+		> div {
+			margin-bottom: 121px;
+			h3 {
+				margin-bottom: 33px;
+			}
+			p {
+			    margin: 0 0 34px;
+			}
+			a {
+				color: $main-c2;
+				&:hover, &:active, &:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.subscribe{
+		margin-bottom: 112px;
+		h3{
+			font-size: 2.2rem;
+			margin-bottom: 64px;
+		}
+		.form-subscribe{
+			form{
+				color: $f-success;
+				.button{
+					display: none;
+				}
+				label{
+					@include normal-f;
+					color: $main-c2;
+					display: inline-block;
+				}
+				input[type="email"]{
+					@include transition( all, 0.3s );
+					@include border-radius( 0 );
+					background-color: transparent;
+					border-bottom: 1px solid $main-c2;
+					padding: 0;
+					height: auto;
+					color: $main-c2;
+					display: inline-block;
+					width: auto;
+					margin-bottom: 0;
+					&:focus{
+						outline: none;
+						border-bottom: 1px solid $main-c2a;
+					}
+				}
+				.form-error{
+					color: $fe-color;
+					display: none;
+				}
+			}
+		}
+	}
+	.footer-menu{
+		margin-bottom: 82px;
+		width: 100%;
+		clear: both;
+		li{
+			margin: 0px 55px;
+			display: inline-block;
+			position: relative;
+			a{
+				color: $main-c2;
+				text-decoration: none;
+				@include bold;
+				@include transition( all,0.5s );
+				&:hover, &:active, &:focus {
+					color: $main-c2a;
+				}
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+			&:before{
+				content: '/';
+				position: absolute;
+				color: $main-c2;
+				left: -62px;
+			}
+			&:first-child{
+				&:before{
+					display: none;
+				}
+			}
+		}
+	}
+	.f-social-media{
+		text-align: center;
+	    margin-bottom: 58px;
+		li{
+			background-image: url( '../images/social-media-sprite.svg' );
+			@include border-radius( 50% );
+			list-style-type: none;
+			background-color: $main-c2;
+			width: 65px;
+			height: 65px;
+			display: inline-block;
+		    background-position: 0 center;
+			margin: 10px;
+			background-size: 380%;
+			@include transition( all,0.5s );
+			a {
+				font-size: 0;
+				color: transparent;
+				display: block;
+				height: 100%;
+			}
+			&.social-facebook{
+				background-position: -1px;
+			}
+			&.social-twitter{
+				background-position: -121px;
+			}
+			&.social-instagram{
+				background-position: -61px;
+			}
+			&.social-youtube{
+    			background-position: -185px;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	.copy{
+		text-align: center;
+	}
+}
+
+@mixin footer_lg{
+	.footer{
+		.footer-menu{
+			li {
+			    margin: 0 35px;
+				&:before{
+				    left: -42px;
+				}
+			}
+		}
+	}
+}
+
+@mixin footer_dt{
+	.footer {
+	    padding-top: 45px;
+		.footerText{
+			>div{
+				margin-bottom: 77px;
+				h3, p{
+			    	margin-bottom: 30px;
+				}
+			}
+		}
+		.subscribe h3 {
+		    margin-bottom: 50px;
+		}
+		.footer-menu{
+			margin-bottom: 40px;
+			li{
+			    display: block;
+				padding-bottom: 30px;
+				margin: 0;
+				&:before{
+					left: 0;
+					right: 0;
+					top: -28px;
+				}
+			}
+		}
+		.subscribe {
+		    margin-bottom: 75px;
+		}
+	}
+}
+@mixin footer_tab{
+	.footer{
+		.container {
+		    padding: 0 15%;
+		}
+		.footerText{
+			>div{
+				h3, p {
+				    margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+@mixin footer_mob{
+	.footer{
+		padding-bottom: 45px;
+		.footerText{
+			>div{
+				margin-bottom: 45px;
+				h3, p{
+				    margin-bottom: 15px;
+				}
+			}
+		}
+		.subscribe{
+		    margin-bottom: 50px;
+			h3{
+				margin-bottom: 35px;
+			}
+			.form-subscribe{
+				form{
+					label {
+					    left: 0;
+					    padding-left: 0;
+					}
+				}
+			}
+		}
+		.f-social-media{
+		    margin-bottom: 45px;
+			li {
+			    width: 55px;
+			    height: 55px;
+			    margin: 5px;
+				background-size: 220px;
+				&.social-facebook{
+					background-position: 0;
+				}
+				&.social-twitter{
+					background-position: -109px;
+				}
+				&.social-instagram{
+					background-position: -54px;
+				}
+				&.social-youtube{
+	    		    background-position: 54px;
+				}
+			}
+		}
+		.footer-menu {
+		    margin-bottom: 28px;
+			li {
+				&:before {
+					top: -23px;
+				}
+			}
+		}
+	}
+}

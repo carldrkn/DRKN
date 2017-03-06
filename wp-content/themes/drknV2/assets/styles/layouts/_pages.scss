@@ -1,0 +1,296 @@
+.wrapper {
+	padding-top: 42px;
+	padding-bottom: 40px;
+	&.category-page{
+		padding-top: 40px;
+	}
+}
+
+
+.prod-item {
+	text-align: center;
+	padding: 20px;
+	display: inline-block;
+	@include font-size-default;
+	text-decoration: none;
+	margin: 0 auto;
+	.img-responsive {
+		margin: 0 auto 10px;
+	}
+	.title {
+		@include bold;
+	}
+	&:active, &:focus, &:hover {
+		text-decoration: none;
+	}
+	.price {
+		&.sold-out { color: $light-color; }
+	}
+}
+
+.shop-l {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+.single-prod {
+	padding-top: 50px;
+    padding-bottom: 58px;
+	.prod-item {
+		.img-responsive {
+			max-width: 840px;
+		  	width: 100%
+
+		}
+	}
+}
+
+.colab-content{
+	margin-top: 103px;
+	margin-bottom: 80px;
+	text-align: center;
+	h1{
+	  font-size: 13rem;
+	  line-height: 12rem;
+		margin-bottom: 70px;
+	}
+	p{
+		padding: 0 80px;
+	}
+}
+
+//Sidebar
+.list-nav,
+.cat-nav {
+	margin-top: 89px;
+	&.fixed-cat {
+		margin-top: 20px;
+	}
+	ul.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			margin-bottom: 10px;
+			a { text-decoration: none; }
+			&.current-menu-item,
+			&.current_page_item {
+				a {
+					@include bold;
+					&:before {
+						content: "›› ";
+					}
+				}
+			}
+			&.divider{
+				 margin-bottom: 52px;
+			}
+			&.menu-item-nolink {
+				margin-top: 52px;
+			}
+			&.menu-item-label {
+				a {
+					@include bold;
+					&:before {
+					  content: "";
+					}
+				}
+			}
+		}
+	}
+}
+
+.ui-selectmenu-button {
+	border: 1px solid #12100b;
+	@include border-radius(0);
+	display: block;
+	text-align: left;
+	@include bold;
+	outline: 0;
+	padding: 8px 10px;
+	.ui-icon-triangle-1-s{
+		&:before {
+			content: "V";
+			display: block;
+			@include transition( all,0.5s );
+		}
+	}
+	&.ui-selectmenu-button-open {
+		border-bottom: none;
+		outline: 0;
+		.ui-icon-triangle-1-s{
+			&:before {
+				@include transform( rotate(180deg) );
+			}
+		}
+	}
+}
+
+
+
+.ui-selectmenu-menu {
+	ul {
+		border-style: solid;
+		border-width: 0 1px 1px 1px;
+		border-color: #12100b;
+		li.ui-menu-item {
+			position: relative;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			&:before {
+				content: "–";
+				position: absolute;
+				top: -25px;
+				left: 10px;
+			}
+			.ui-menu-item-wrapper {
+				&.ui-state-active {
+					background-color: transparent;
+					border: none;
+					@include bold;
+					color: $text-c;
+				}
+			}
+		}
+	}
+}
+
+@mixin page_lg{
+	.cat{
+		.product-list{
+			margin-top: 35px;
+			.product-item{
+				&.category{
+					a{
+						img {
+							width: 100%;
+							margin-bottom: 0;
+							margin-top: 60px;
+						}
+					}
+				}
+			}
+		}
+		.pc-cat{
+			h1 {
+			    font-size: 10.5rem;
+				line-height: normal;
+			    margin-bottom: 80px;
+			}
+		}
+	}
+
+	.colab-content{
+		margin-bottom: 50px;
+		h1 {
+		    font-size: 9rem;
+			line-height: normal;
+		    margin-bottom: 30px;
+		}
+	}
+}
+
+@mixin pages_dt {
+	.prod-item {
+	  padding: 0;
+		.img-responsive {
+			margin: 0 auto 60px;
+		}
+	}
+	.cat{
+		.pc-cat{
+			h1 {
+			    font-size: 6rem;
+			    margin-bottom: 40px;
+			}
+		}
+		.product-list {
+		    margin-top: 0;
+		}
+	}
+	
+	.colab-content{
+		margin-top: 30px;
+		margin-bottom: 0;
+		p {
+		    padding: 0;
+		}
+		h1{
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@mixin pages_tab {
+	.wrapper {
+		padding-top: 20px;
+	}
+	.prod-item {
+		.img-responsive {
+			margin: 0 auto 40px;
+		}
+	}
+	.list-nav,
+	.cat-nav {
+		margin-top: 15px;
+	}
+	.cat{
+		margin-top: 50px;
+		.product-list{
+			.product-item{
+				&.category{
+					a{
+						img {
+							margin-top: 35px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.colab-content {
+	    margin-bottom: 0;
+		margin-top: 73px;
+		h1 {
+		    margin-bottom: 35px;
+			font-size: 7rem;
+		}
+		p{
+			margin: 0;
+		}
+	}
+}
+
+@mixin pages_mob {
+	.prod-item {
+		max-width: 330px;
+		.img-responsive {
+			margin: 0 auto 30px;
+		}
+	}
+	.single-prod {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		.prod-item {
+			.img-responsive { margin: 0 auto 30px; }
+		}
+	}
+	.cat{
+		.pc-cat{
+			h1 {
+			    font-size: 4rem;
+			    margin-bottom: 15px;
+			}
+			p{
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+	
+	.colab-content h1 {
+	    margin-bottom: 30px;
+	    font-size: 6rem;
+	}
+}

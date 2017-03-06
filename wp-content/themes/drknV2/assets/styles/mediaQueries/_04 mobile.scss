@@ -1,0 +1,63 @@
+@media only screen and (max-width: 480px) {
+
+	.container, .container-fluid {
+		padding-left: 10px;
+		padding-right: 10px;
+		.row {
+			margin-left: -10px;
+			margin-right: -10px;
+			[class^="col"] {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+
+/* -----------------------------------------------------------------------------
+
+    TYPOGRAPHY
+
+----------------------------------------------------------------------------- */
+	@include typography_mob;
+	@include header_mob;
+	@include footer_mob;
+	@include pages_mob;
+
+/* -----------------------------------------------------------------------------
+
+    LAYOUT
+
+----------------------------------------------------------------------------- */
+
+  /* -----------------------------------------------------------------------------
+      PAGES
+  ----------------------------------------------------------------------------- */
+	@include home_mob;
+	@include product-selected_mob;
+	@include post-single_mob;
+	@include shop_mob;
+	@include checkout_mob;
+}
+
+@media only screen and (max-width: 320px) {
+	/* Posts */
+	.post-single{
+		article{
+			.post-category{
+				div {
+				    margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	/* Category */
+	.cat .product-list .product-item.category a img {
+	    margin-top: 58px;
+	}
+
+	.colab-content {
+	    margin-top: 40px;
+	}
+
+}

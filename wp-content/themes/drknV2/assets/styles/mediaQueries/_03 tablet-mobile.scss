@@ -1,0 +1,30 @@
+@media only screen and (max-width: $screen-xs-max) {
+/* -----------------------------------------------------------------------------
+
+    TYPOGRAPHY
+
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+
+    LAYOUT
+
+----------------------------------------------------------------------------- */
+	@include typography_tab;
+	@include header_tab;
+	@include footer_tab;
+	@include pages_tab;
+	@include bannerSlider_mob;
+
+  /* -----------------------------------------------------------------------------
+      PAGES
+  ----------------------------------------------------------------------------- */
+	@include home_tab;
+	@include shop_tab;
+	@include post-single_tab;
+	@include pd_tab;
+	@include product-selected_tab;
+	@include error404_tab;
+	@include checkout_tab;
+	
+
+}

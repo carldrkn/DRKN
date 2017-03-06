@@ -1,0 +1,69 @@
+@import "common/variables";
+@import "common/grid";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+/*! SCSS STRUCTURE by Jan-Michael Pingol */
+/* -----------------------------------------------------------------------------
+
+   COMMON
+
+----------------------------------------------------------------------------- */
+@import "common/mixins";
+@import "common/fonts";
+@import "common/typography";
+@import "common/adminbar";
+@import "common/global";
+
+@import "common/imports";
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+   COMPONENTS
+
+----------------------------------------------------------------------------- */
+@import "components/buttons";
+@import "components/burger";
+@import "components/comments";
+@import "components/forms";
+@import "components/grid";
+@import "components/swipebox";
+@import "components/swiper";
+
+
+/* -----------------------------------------------------------------------------
+
+   LAYOUT
+
+----------------------------------------------------------------------------- */
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "layouts/banner";
+@import "layouts/pages";
+@import "layouts/partials";
+@import "layouts/404";
+/* Pages */
+@import "layouts/pages/home";
+@import "layouts/pages/shop";
+@import "layouts/pages/product-selected";
+@import "layouts/pages/page-default";
+@import "layouts/pages/checkout";
+
+
+/* -----------------------------------------------------------------------------
+
+    MEDIA QUERIES
+
+----------------------------------------------------------------------------- */
+@import "mediaQueries/01 lg-desktop";
+@import "mediaQueries/02 desktop";
+@import "mediaQueries/03 tablet-mobile";
+@import "mediaQueries/04 mobile";

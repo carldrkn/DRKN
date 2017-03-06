@@ -1,0 +1,218 @@
+/** PRODUCT LIST **/
+
+@media (min-width: 992px) {
+	.product-list .product:nth-child(3n + 1){
+		clear: both;
+	}
+}
+
+/** END PRODUCT LIST **/
+
+/** PRODUCT PAGE **/
+
+.shop-product{
+	margin-bottom: 80px;
+	h5 { text-transform: uppercase; }
+}
+
+.product-image {
+	position: relative;
+}
+
+.sizes{
+	border-bottom: 1px solid #7A7A7A;
+	border-top: 1px solid #7A7A7A;
+	overflow: hidden;
+}
+
+.shop-product .sizes li{
+	padding: 10px 0;
+	margin-right: 10px;
+}
+
+.shop-product .sizes li a{
+	text-decoration: none;
+}
+
+.shop-product .sizes li.active a{
+	background-position: right center;
+}
+
+.shop-product .sizes li a{
+	display: block;
+	text-decoration: none;
+	width: 61px;
+	font-size: 13px;
+	height: 23px;
+	background: url('assets/images/sizes-bg.png');
+	background-position: left center;
+	padding: 3.5px 0;
+	text-align: center;
+}
+
+.shop-product .sizes li{
+	display: inline-block;
+}
+
+.shop-product .buy-button:hover{
+	text-decoration: none;
+}
+
+.wrap-buy-button{
+	padding: 10px 0;
+	border-bottom: 1px solid #7A7A7A;
+	margin-bottom: 10px;
+}
+
+.shop-product .buy-button{
+	display: block;
+	background: url('assets/images/buy-button.png') no-repeat;
+	background-size: 100% 48px;
+	font-size: 30px;
+	text-align: center;
+	height: 48px;
+	padding: 5px;
+}
+
+.shop-product .policy,
+.shop-product .terms{
+	font-size: 15px;
+	color: #7A7A7A;
+	text-decoration: underline;
+	font-family: 'HelveticaNeue';
+	margin-right: 10px;
+	position: relative;
+}
+
+.wrap-size-guide{
+	position: relative;
+}
+
+.size-guide .inner-size-guide th:first-of-type{
+	text-align: left;
+}
+
+.size-guide .inner-size-guide tbody tr{
+	background-color: #9d9d9d;
+}
+
+.size-guide .inner-size-guide tbody tr.dark{
+	background-color: #7a7a7a;
+}
+
+.size-guide .inner-size-guide tbody th{
+	border: 1px solid #282828;
+	font-family: 'HelveticaNeue';
+	font-size: 10px;
+	font-weight: 400;
+}
+
+.size-guide .inner-size-guide p.small-p{
+	color: #787878;
+	font-size: 11px;
+	font-family: 'HelveticaNeue';
+	line-height: 15px;
+	padding: 10px 0;
+	border-bottom: 2px solid #787878;
+}
+
+.size-guide .inner-size-guide p{
+	color: white;
+	font-family: "AkzidenzGroteskBQ-LigCnd";
+	font-size: 18px;
+
+}
+
+.size-guide .inner-size-guide th{
+	color: white;
+	padding: 2px;
+	text-align: center;
+}
+
+.size-guide {
+	position: absolute;
+	display: none;
+	left: -395px;
+	background-color: #333333;
+	padding: 15px;
+	width: 375px;
+	z-index: 9999999;
+	top: -280px;
+}
+
+
+
+.pop-arrow2{
+	position: absolute;
+	right: -15px;
+	bottom: 100px;
+	z-index: 9999999;
+}
+
+#size-guide-button:hover {
+
+}
+
+ul.social-medium li{
+	display: inline-block;
+	margin-top: 10px;
+}
+
+ul.social-medium{
+	width: 300px;
+}
+
+ul.social-medium li:last-of-type{
+	margin-right: 0;
+}
+
+ul.social-medium li{
+	margin-right: 15px;
+}
+
+ul.social-medium li a{
+	display: block;
+	background: url('assets/images/social-medium.png') no-repeat;
+	width: 21px;
+	height: 21px;
+}
+
+ul.social-medium li:nth-child(2) a{
+	background-position: -36px 0;
+}
+
+ul.social-medium li:nth-child(3) a{
+	background-position: -72px 0;
+}
+
+ul.social-medium li:nth-child(4) a{
+	background-position: -108px 0;
+}
+
+.thumbnails{
+	overflow: hidden;
+	margin-top: 40px;
+}
+
+.thumbnails li{
+	padding: 0;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.pop-arrow3{
+	margin-left: 30px;
+}
+
+.tags{
+	width: 140px;
+}
+
+.tags a{
+	text-decoration: underline;
+	color: #7A7A7A;
+}
+
+/** END PRODUCT PAGE **/
+
+

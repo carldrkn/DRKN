@@ -1,0 +1,28 @@
+{
+  "name": "drkn",
+  "description": "drkn theme version 2",
+  "main": "index.js",
+  "authors": [
+    "Carl Nilsson"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "devDependencies": {
+    "jquery-ui-scss": "^0.0.1",
+    "jquery-ui": "^1.12.1",
+    "swipebox": "^1.4.4",
+    "jquery": "^3.1.1",
+    "swiper": "^3.4.0"
+  },
+  "private": true
+}

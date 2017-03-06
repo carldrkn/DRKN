@@ -1,0 +1,74 @@
+/* -----------------------------------------------------------------------------
+	
+	FONTS
+	
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+    Font Import
+----------------------------------------------------------------------------- */
+	@import "helveticaneue";
+	
+/* -----------------------------------------------------------------------------
+    Font Mixins
+----------------------------------------------------------------------------- */
+
+@mixin HelveticaNeueLTStd-Lt {
+  font-family: 'HelveticaNeueLTStd-Lt'; 
+}
+
+@mixin HelveticaNeueLTStd-Bd {
+  font-family: 'HelveticaNeueLTStd-Bd';
+}
+
+@mixin HelveticaNeueLTStd-UltLt {
+  font-family: 'HelveticaNeueLTStd-UltLt';
+}
+
+
+
+
+/* -----------------------------------------------------------------------------
+    Font Classifications
+----------------------------------------------------------------------------- */
+
+/*----- Default text -----*/
+@mixin font-size-default {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
+
+@mixin font-default {
+  @include HelveticaNeueLTStd-Lt;
+  @include font-size-default;
+}
+
+@mixin normal-f {
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin normal-i {
+  font-style: italic;
+  font-weight: normal;
+}
+
+@mixin bold {
+  @include HelveticaNeueLTStd-Bd;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin bold-i {
+  @include HelveticaNeueLTStd-Bd;
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+@mixin superlight {
+  font-family: 'HelveticaNeueLTStd-UltLt';
+  font-style: normal;
+  font-weight: normal;
+}
+

@@ -1,0 +1,151 @@
+@-ms-viewport {
+	width: device-width;
+}
+
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	-webkit-font-smoothing: antialiased;
+	outline: none;
+}
+
+.clearFix{
+	clear: both;
+}
+
+
+.zm-slider {
+	width: 100%;
+	position: relative;
+	padding: 0px 0px;
+	overflow: hidden;
+}
+
+.zm-slider .slidesHolder{
+  
+	
+}
+
+.zm-slider .slidesKeeper{
+    transition: margin-left 0.75s;
+    
+}
+
+.zm-slider .slide{
+	
+    float: left;
+}
+
+.zm-slider .item{
+	width: 25%;
+	position: relative;
+	float: left;
+	padding: 0px;
+	opacity: 1;
+	transition: all 0.2s;
+}
+
+/*.zm-slider .item:hover{
+    opacity: 0.8;
+}*/
+
+.zm-slider img{
+	width: 100%;
+}
+
+.zm-slider button{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0px;
+    background-color: transparent;
+    border: none;
+    background-position: 50% 50%;
+    background-size: 25px auto;
+    background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.zm-slider button:hover{
+    opacity: 0.8;
+}
+
+.zm-slider .prev{
+	background-image: url('../../images/previous.png');
+	left: 30px;
+}
+
+.zm-slider .next{
+	background-image: url('../../images/next.png');
+	right: 30px;
+}
+
+.zm-slider .indicator{
+    text-align: center;
+	display: none;
+    margin-top: 20px;
+    height: 23px;
+}
+
+.zm-slider .dot{
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	background-color: #D3D3D3;
+	border-radius: 50%;
+	margin: 3.5px;
+	cursor: pointer;
+}
+
+.zm-slider .dot:hover{
+	background-color: #b4b4b4;
+}
+
+.zm-slider .dot.active{
+	background-color: rgb(125,61,88);
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.hide-tablet{
+		display: none;
+	}
+
+	.zm-slider .item{
+		width: 33%;
+	}
+}
+
+
+@media only screen and (max-width: 992px) {
+	.zm-slider .prev{
+		left: 20px;
+	}
+
+	.zm-slider .next{
+		right: 20px;
+	}
+}
+
+@media only screen and (max-width: 840px) {
+	.zm-slider .item{
+		width: 100%;
+	}
+
+	.zm-slider{
+		padding: 0;
+	}
+
+	
+	.hide-mobile{
+		display: none;
+	}
+
+
+
+}

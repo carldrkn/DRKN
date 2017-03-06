@@ -1,0 +1,343 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+@font-face {
+	font-family: "AkzidenzGrotesk";
+	src: url('../akzidenzgrotesk-lightcond-webfont.eot');
+	src: url('../fonts/akzidenzgrotesk-lightcond-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/akzidenzgrotesk-lightcond.otf') format('opentype'),
+		url('../fonts/akzidenzgrotesk-lightcond-webfont.woff2') format('woff2'),
+		url('../fonts/akzidenzgrotesk-lightcond-webfont.woff') format('woff'),
+		url('../fonts/akzidenzgrotesk-lightcond-webfont.ttf') format('truetype'),
+		url('../fonts/akzidenzgrotesk-lightcond-webfont.svg#akzidenz-grotesk_bq_light_cRg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+html {
+	font-family: "AkzidenzGrotesk";
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+}
+
+.wf-loading * {
+	color: rgba(255,255,255,0);
+}
+
+.wf-loading body {
+	opacity: 0;
+}
+
+body {
+	opacity: 0;
+}
+
+a, p {
+	color: inherit;
+}
+
+/* 
+ * Header
+ */
+
+header {
+	padding: 20px 20px;
+}
+
+.left-side {
+	display: inline-block;
+}
+
+.right-side {
+	float: right;
+}
+
+.follow, .connect {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.logo, .share-buttons {
+	display: inline-block;
+}
+
+.logo img {
+	float: left;
+}
+
+.share-buttons {
+	position: relative;
+	margin-left: 30px;
+	top: -1px;
+}
+
+.countdown {
+	margin-left: 10px;
+}
+
+.right-side {
+	position: relative;
+	top: -1px;
+}
+
+.right-side-inner {
+	display: table;
+	height: 100%;
+}
+
+.right-side-inner-content {
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+header p {
+	display: inline;
+}
+
+header a img {
+	position: relative;
+	top: 2px;
+}
+
+.right-side a, .right-side p {
+	opacity: 0.7;
+}
+
+.right-side a:hover {
+	opacity: 1;
+}
+
+.bar {
+	display: inline-block;
+	height: 10px;
+	width: 70px;
+	position: relative;
+	top: -0.5px;
+	background-color: #fff;
+	opacity: 0.4;
+}
+
+.circles {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+.circles p {
+	float: left;
+	margin-top: -2px;
+	color: #999;
+	margin-right: 3px;
+}
+
+.circle {
+	width: 12px;
+	height: 12px;
+
+	border: 1px solid #8d8d8d;
+	border-radius: 6px;
+
+	float: left;
+	margin-left: 2px;
+}
+
+.circle.active {
+	background-color: #8d8d8d;
+}
+
+/*
+ * EMBED
+ */
+
+article {
+	position: relative;
+	clear: both;
+	overflow: hidden;
+}
+
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300%;
+	top: -100%;
+}
+.video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+/*
+ * Dialog
+ */
+
+.newsletter-dialog {
+	background-color: #343434;
+	position: absolute;
+	top: 70px;
+	right: 20px;
+	//top: 50%;
+	//left: 50%;
+	padding: 17px 14px;
+	z-index: -1;
+	opacity: 0;
+}
+
+.newsletter-dialog.active {
+	z-index: 3;
+	opacity: 1;
+}
+
+.button {
+	display: table;
+	background-color: black;
+	width: 105%;
+	left: -2.5%;
+	position: relative;
+	margin-top: 1em;
+	cursor: pointer;
+}
+
+.button > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.button-title {
+	text-align: center;
+}
+
+.button-left, .button-left img, .button-right, .button-right img {
+	line-height: 0;
+	height: 45px;
+	width: 34px;
+}
+
+input[type="text"] {
+	background-color: #999;
+	color: white;
+	text-align: center;
+	font-family: 'AkzidenzGrotesk';
+	border: none;
+	text-transform: uppercase;
+	font-size: 18px;
+	padding: 7px 5px 6px;
+	width: 180px;
+	border-radius: 0;
+}
+
+.form-error {
+	text-align: center;
+	padding-top: 1em;
+	display: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+	color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    #fff;
+	opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #fff;
+	opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:    #fff;
+}
+
+.close-dialog {
+	display: none;
+}
+
+@media screen and ( max-width: 650px ) {
+
+	header {
+		padding: 20px 10px 0 5px;
+	}
+
+	.video-overlay {
+		display: none;
+	}
+	
+	.right-side {
+		float: left;
+		height: initial !important;
+		padding-top: 10px;
+		width: 100%;
+	}
+
+	.right-side-inner, .right-side-inner-content {
+		display: block;
+	}
+
+	.follow {
+		float: left;
+	}
+	.connect {
+		float: right;
+		position: relative;
+		top: 3px;
+	}
+	
+	.share-buttons {
+		margin-left: 10px;
+	}
+	
+	.countdown {
+		margin-left: 0;
+		margin-top: 5px;
+		display: block;
+	}
+
+	.circles {
+		top: 25px;
+	}
+
+	.circles p {
+		display: block;
+		float: initial;
+		position: relative;
+		left: 4px;
+		margin-bottom: 6px;
+		text-align: right;
+	}
+
+	iframe {
+		height: 100%;
+		top: 0;
+	}
+
+	.newsletter-dialog {
+		right: 10px;
+	}
+
+	.close-dialog {
+		display: block;
+		cursor: pointer;
+		text-align: right;
+		font-size: 35px;
+		margin-top: -0.5em;
+		color: gray;
+	}
+}
+
+@media screen and ( max-width: 360px ) {
+	.bar {
+		display: none;
+	}
+}

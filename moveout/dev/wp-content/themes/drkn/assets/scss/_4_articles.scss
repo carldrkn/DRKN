@@ -1,0 +1,73 @@
+
+/** ARTICLE PAGE **/
+
+section.article{
+	margin-bottom: 60px;
+}
+
+/*section.article .container-fluid .row*/ .single-article{
+	border-bottom: 1px solid black;
+	padding: 10px 0;
+	position: relative;
+}
+
+/*section.article .container-fluid .row*/ .single-article h5{
+	margin-bottom: 0;
+}
+
+/*section.article .container-fluid .row */.single-article .author{
+	font-size: 15px;
+	font-family: 'AkzidenzGroteskBQ-LigCnd';
+	  text-transform: uppercase;
+}
+
+
+/*section.article .container-fluid .row*/ .single-article .date-time{
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	color: #7A7A7A;
+	font-size: 15px;
+	left: -45px;
+}
+
+/** END ARTICLE PAGE **/
+
+/** POST CONTENT **/
+
+.post-content {
+	div {
+		margin-bottom: 1em;
+		min-height: 1px;
+	}
+	* {
+		font-family: 'HelveticaNeue';
+		font-size: 13px;
+		line-height: 24px;
+		color: #7A7A7A;
+	}
+
+	ul li {
+		list-style-type: circle;
+		margin-left: 15px;
+	}
+	ol li {
+		list-style-type: decimal;
+		margin-left: 15px;
+	}
+	
+	ul, ol {
+		margin-bottom: 10px;
+	}
+
+	a {
+		color: #444;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+/** END POST CONTENT **/

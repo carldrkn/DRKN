@@ -1,0 +1,14 @@
+{
+  "name": "jquery-ui-scss",
+  "homepage": "https://github.com/Alex5646/jquery-ui-sass",
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "738b4121f4f33b2625ee9c42c47881d1e827b5cc"
+  },
+  "_source": "https://github.com/Alex5646/jquery-ui-sass.git",
+  "_target": "^0.0.1",
+  "_originalSource": "jquery-ui-scss"
+}
